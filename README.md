@@ -1,7 +1,9 @@
 Docker Integration Test
 ===
 
-# Repo Setup
+Jenkins Master For This Repo: http://104.236.43.123:8080
+
+## Repo Setup
 
 The _test.py_ script will build the docker images and run their respective tests. Tests come in the form of another Dockerfile that is run ONTOP of the docker image you are wanting to test. You should not have to modify _test.py_ for this repo to work.
 
@@ -9,11 +11,11 @@ All configuration is done through _test.json_
 
 This example repo stores all images in _1.5_ and all tests in _tests_
 
-# Configuration
+## Configuration
 
 All images will be built according to _test.json_. This json object consists of the repository we are testing for, and the images we are running our tests on. They will be tagged: `repo:tag` where the tag belongs to the current image in the `tests` array. The `path` property tells _test.py_ where to find the Dockerfile to build the image, and the _test_ property tells _test.py_ where to find the Dockerfile to test our newly built image. If either the building of the image or the test fails, the entire build will fail.
 
-# When / How to build
+## When / How to build
 
 Uses [ghprb](https://github.com/janinko/ghprb). Excerpt from it's Readme:
 
