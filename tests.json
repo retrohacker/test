@@ -1,0 +1,20 @@
+{
+  "repo":"iojs",
+  "tests":[
+    {
+      "tag":"1.5.1",
+      "path":["1.5"],
+      "test":["tests"]
+    },
+    {
+      "tag":"1.5.1-onbuild",
+      "path":["1.5","onbuild"],
+      "test":["tests","onbuild"]
+    },
+    {
+      "tag":"1.5.1-slim",
+      "path":["1.5","slim"],
+      "test":["tests","slim"]
+    }
+  ]
+}
